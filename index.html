@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andra Vinay Kumar - Certification Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #1abc9c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--accent-color);
+        }
+        
+        .student-info {
+            text-align: right;
+        }
+        
+        .student-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .student-college {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #666;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            min-width: 130px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 5px;
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            padding: 2rem 0;
+            background-color: white;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 1rem;
+        }
+        
+        .filter-btn {
+            padding: 8px 18px;
+            background-color: var(--light-color);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Certificates Grid */
+        .certificates-section {
+            padding: 2rem 0 4rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .certificate-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .certificate-header {
+            padding: 20px 20px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .certificate-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+        
+        .certificate-org {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .certificate-content {
+            padding: 15px 20px;
+            flex-grow: 1;
+        }
+        
+        .certificate-details {
+            margin-bottom: 15px;
+        }
+        
+        .detail-row {
+            display: flex;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            min-width: 120px;
+            color: #555;
+        }
+        
+        .detail-value {
+            color: #666;
+        }
+        
+        .certificate-footer {
+            padding: 15px 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .certificate-category {
+            padding: 5px 12px;
+            background-color: #e3f2fd;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .view-details-btn {
+            padding: 8px 16px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .view-details-btn:hover {
+            background-color: #16a085;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: var(--accent-color);
+        }
+        
+        .footer-section p {
+            margin-bottom: 1rem;
+            max-width: 300px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        /* Modal for certificate view */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #888;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .modal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-detail-item {
+            margin-bottom: 15px;
+        }
+        
+        .modal-detail-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .modal-detail-item p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .modal-description {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .modal-description h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .modal-description p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .student-info {
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: 110px;
+                padding: 12px 15px;
+            }
+            
+            .certificates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                justify-content: flex-start;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-item {
+                min-width: 100%;
+            }
+            
+            .detail-row {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+            
+            .detail-label {
+                margin-bottom: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-certificate"></i>
+                <span>Certification Portfolio</span>
+            </div>
+            <div class="student-info">
+                <div class="student-name">Andra Vinay Kumar</div>
+                <div class="student-college">KKR & KSR Institute of Technology and Sciences</div>
+                <div class="student-college">JNTU Kakinada | Reg. No: 22JR1A0536</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>My Certification Portfolio</h1>
+            <p>This portfolio showcases all the professional certifications, internships, and hackathons I've completed, demonstrating my technical skills and commitment to continuous learning.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="total-certs">20</div>
+                    <div class="stat-label">Total Certifications</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Internships</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Hackathons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Technical Skills</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Filter by Category</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Certificates</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn" data-filter="cyber">Cybersecurity</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates-section" id="certificates">
+        <div class="container">
+            <h2 class="section-title">My Certifications & Internships</h2>
+            <div class="certificates-grid" id="certificates-container">
+                <!-- Certificates will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Andra Vinay Kumar</h3>
+                    <p>A passionate Computer Science student with expertise in Full Stack Development, AI/ML, Cloud Computing, Cybersecurity, and Mobile App Development.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vinay-kumar-a91456290?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Education</h3>
+                    <p><strong>KKR & KSR Institute of Technology and Sciences</strong></p>
+                    <p>JNTU Kakinada</p>
+                    <p>B.Tech in Computer Science & Engineering</p>
+                    <p>Registration No: 22JR1A0536</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Technical Skills</h3>
+                    <p>Full Stack Development • Android Development • AI/ML • Cloud Computing • Cybersecurity • Data Science • MERN Stack • Robotics • Java • HTML/CSS • Mobile App Development</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Andra Vinay Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certificateModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Certificate Title</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-details">
+                    <div class="modal-detail-item">
+                        <h4>Issuing Organization</h4>
+                        <p id="modal-org">Organization Name</p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h4>Certificate ID</h4>
+                        <p id="modal-id">ABC123XYZ</p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h4>Date</h4>
+                        <p id="modal-date">Month Year</p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h4>Duration</h4>
+                        <p id="modal-duration">8 Weeks</p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h4>Performance / Grade</h4>
+                        <p id="modal-grade">Good</p>
+                    </div>
+                </div>
+                <div class="modal-description">
+                    <h4>Description</h4>
+                    <p id="modal-description">Certificate description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Certificate data from all your files
+        const certificates = [
+            // Original 12 certificates
+            {
+                id: 1,
+                title: "Full Stack Development Internship",
+                category: "fullstack",
+                organization: "APSCHE & International Institute of Digital Technologies",
+                date: "24/07/2024",
+                credentialId: "BBAPSCHEIIDT2024ST105056",
+                duration: "8 Weeks",
+                grade: "Completed",
+                description: "Short-term internship for 8 Weeks on Full Stack Development organized by International Institute of Digital Technologies with industry partner Blackbuck Engineers, in association with Andhra Pradesh State Council of Higher Education (APSCHE)."
+            },
+            {
+                id: 2,
+                title: "Android Developer Virtual Internship",
+                category: "android",
+                organization: "AICTE, Google for Developers & EduSkills",
+                date: "July - September 2024",
+                credentialId: "2d8f1b5ae3ca8672de80213af8cd11a7",
+                duration: "10 weeks",
+                grade: "Student ID: STU64e8b7fa723bc1692973050",
+                description: "10 weeks Android Developer Virtual Internship supported by India Edu Program, Google for Developers. Certificate issued by AICTE, Google for Developers, and EduSkills."
+            },
+            {
+                id: 3,
+                title: "Full Stack Development Internship (Rated Good)",
+                category: "fullstack",
+                organization: "APSCHE & International Institute of Digital Technologies",
+                date: "2024",
+                credentialId: "BBAPSCHEIIDT2024STM102720",
+                duration: "8 weeks",
+                grade: "Good",
+                description: "8-week duration Internship on Full Stack Development conducted by International Institute of Digital Technologies (Knowledge Partner), Blackbuck Engineers and Andhra Pradesh State Council of Higher Education (APSCHE). Performance rated as 'Good'."
+            },
+            {
+                id: 4,
+                title: "Data Science & Analytics",
+                category: "ai-ml",
+                organization: "HP LIFE",
+                date: "10/08/2024",
+                credentialId: "b80fe3d5-de88-4491-924c-d77fe9dd6859",
+                duration: "Online Course",
+                grade: "Completed",
+                description: "HP LIFE online course on Data Science & Analytics. Learned about leading data science and analytics practices, methodologies, and tools, examined benefits and challenges of data-driven approach for businesses."
+            },
+            {
+                id: 5,
+                title: "AI Tools and ChatGPT Workshop",
+                category: "ai-ml",
+                organization: "be10x",
+                date: "21/12/2025",
+                credentialId: "be10x Verified",
+                duration: "Workshop",
+                grade: "Completed",
+                description: "AI tools and ChatGPT workshop by be10x. Holder can create presentations using AI in under 5 min, analyze data using AI in under 30 min, and code and debug using AI in under 10 min."
+            },
+            {
+                id: 6,
+                title: "Cloud Computing",
+                category: "cloud",
+                organization: "NPTEL - IIT Kharagpur",
+                date: "Jul-Oct 2024",
+                credentialId: "NPTEL24CS118S1055702533",
+                duration: "12 weeks",
+                grade: "51% (Certified)",
+                description: "12-week Cloud Computing course by NPTEL (funded by MoE, Govt. of India) through Indian Institute of Technology Kharagpur. Certified with consolidated score of 51%."
+            },
+            {
+                id: 7,
+                title: "Deloitte Cyber Job Simulation",
+                category: "cyber",
+                organization: "Deloitte (via Forage)",
+                date: "23/12/2025",
+                credentialId: "Enrollment: 3ccj27jg49jhmfWOL | User: 694a070d1b66a806571d5727",
+                duration: "Job Simulation",
+                grade: "Completed",
+                description: "Deloitte Cyber Job Simulation completed in December 2025. Completed practical tasks in Cybersecurity. Issued by Forage and Deloitte."
+            },
+            {
+                id: 8,
+                title: "HTML, CSS and JavaScript Course",
+                category: "web",
+                organization: "MindLuster",
+                date: "07/01/2025",
+                credentialId: "2b6d8bce",
+                duration: "Course",
+                grade: "Completed",
+                description: "Successfully completed HTML, CSS and JavaScript course from MindLuster. Study started on 22/01/2025."
+            },
+            {
+                id: 9,
+                title: "Innovative Product Development in Robotics",
+                category: "robotics",
+                organization: "HACKBOATS & KKR & KSR Institute of Technology",
+                date: "05-13 Feb 2024",
+                credentialId: "HBKITS24CSE034",
+                duration: "6 Day Innovation Sprint",
+                grade: "Participated",
+                description: "Attended 6 Day Innovation Sprint in Innovative Product Development in Robotics organized by HACKBOATS and Department of CSE, KKR and KSR Institute of Technology & Sciences."
+            },
+            {
+                id: 10,
+                title: "MERN Stack Development Course",
+                category: "fullstack",
+                organization: "CodeTantra Tech Solutions",
+                date: "17-23 Sept 2024",
+                credentialId: "C3D4D5D2S4E0G3",
+                duration: "1 week",
+                grade: "Completed",
+                description: "Successfully completed skill development program course on MERN STACK conducted at KKR AND KSR Institute Of Technology And Sciences in association with CodeTantra Tech Solutions Pvt. Ltd, Hyderabad."
+            },
+            {
+                id: 11,
+                title: "Cybersecurity Internship",
+                category: "cyber",
+                organization: "Techno Future India & KKR & KSR Institute",
+                date: "05 May - 07 July 2025",
+                credentialId: "TF1003707",
+                duration: "2 months",
+                grade: "Completed",
+                description: "Two-month internship in Cybersecurity organized by Techno Future India in collaboration with Department of Computer Science and Engineering, KKR & KSR Institute of Technology and Sciences."
+            },
+            {
+                id: 12,
+                title: "AI & ML for Process Redesign and Smart Product Development",
+                category: "ai-ml",
+                organization: "Techno Future India & KKR & KSR Institute",
+                date: "08-17 Sept 2025",
+                credentialId: "TF1003204",
+                duration: "10 days",
+                grade: "Participated",
+                description: "Skill-Oriented Course on AI & ML for Process Redesign and Smart Product Development organized by Techno Future India in collaboration with Department of Computer Science and Engineering, KKR & KSR Institute of Technology and Sciences."
+            },
+            
+            // New certificates from WhatsApp images
+            {
+                id: 13,
+                title: "Appathon 2023 - Ideathon & 24-Hour Hackathon",
+                category: "hackathon",
+                organization: "Make Skilled, Hyderabad & KKR & KSR Institute",
+                date: "6-10 Nov & 17-18 Nov 2023",
+                credentialId: "Appathon 2023",
+                duration: "Multiple days",
+                grade: "Participated",
+                description: "Participated in Appathon 2023 - Ideathon (6th to 10th November) and a 24-hour hackathon (17th to 18th November 2023) organized by Make Skilled, Hyderabad as part of Corporate Innovation 2023."
+            },
+            {
+                id: 14,
+                title: "Generative AI Advanced Skill Enhancement Program",
+                category: "ai-ml",
+                organization: "Syncronota Technologies & KKR & KSR Institute",
+                date: "03-12 Feb 2025",
+                credentialId: "Generative AI Program",
+                duration: "One Week",
+                grade: "Completed",
+                description: "One Week Advanced Skill Enhancement Program on Generative AI organized by Department of Computer Science and Engineering, KKR & KSR Institute of Technology and Sciences in collaboration with Syncronota Technologies Private Limited."
+            },
+            {
+                id: 15,
+                title: "Java Programming Course",
+                category: "java",
+                organization: "MindLuster",
+                date: "14/10/2023",
+                credentialId: "10115035191",
+                duration: "Course",
+                grade: "Completed",
+                description: "Successfully completed Java programming course from MindLuster. Course started on 2023-10-14."
+            },
+            {
+                id: 16,
+                title: "HTML and CSS Animations for Beginners",
+                category: "web",
+                organization: "MindLuster",
+                date: "13/01/2024 - 10/02/2024",
+                credentialId: "10115030942",
+                duration: "5 hours",
+                grade: "Completed",
+                description: "Successfully completed HTML and CSS Animations for Beginners course from MindLuster. Course duration: 5 hours. Course started on 2024-01-13."
+            },
+            {
+                id: 17,
+                title: "Mobile App Development Skill Course",
+                category: "android",
+                organization: "Make Skilled, Hyderabad & KKR & KSR Institute",
+                date: "16-21 Oct 2023",
+                credentialId: "Mobile App Development",
+                duration: "36 hours",
+                grade: "Score: 92/100",
+                description: "Successfully completed Skill Oriented Course of 36 hours on 'Mobile App Development' in II Year B.Tech Semester-1. Cleared certification exam with score of 92 and completed all 10 assessments successfully."
+            },
+            {
+                id: 18,
+                title: "Smart India Hackathon 2025",
+                category: "hackathon",
+                organization: "Ministry of Education, Government of India",
+                date: "December 8-12, 2025",
+                credentialId: "SIH 2025",
+                duration: "5 days",
+                grade: "Participated",
+                description: "Participated in Smart India Hackathon 2025 Grand Finale. Smart India Hackathon is a nationwide initiative by Ministry of Education, Government of India to provide students with a platform to solve pressing problems of various organizations."
+            },
+            {
+                id: 19,
+                title: "HackMeLaa 2024 Hackathon",
+                category: "hackathon",
+                organization: "HackMeLaa & KKR & KSR Institute",
+                date: "18-19 Dec 2024",
+                credentialId: "HM2024-33",
+                duration: "2 days",
+                grade: "Participated",
+                description: "Actively participated in HackMeLaa 2024 held on 18th and 19th Dec, 2024 at KKR and KSR institute of technology and sciences, Guntur, Andhra Pradesh. Demonstrated dedication, creativity, and problem-solving skills."
+            }
+        ];
+
+        // DOM Elements
+        const certificatesContainer = document.getElementById('certificates-container');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const totalCertsElement = document.getElementById('total-certs');
+        const modal = document.getElementById('certificateModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalOrg = document.getElementById('modal-org');
+        const modalDate = document.getElementById('modal-date');
+        const modalId = document.getElementById('modal-id');
+        const modalGrade = document.getElementById('modal-grade');
+        const modalDuration = document.getElementById('modal-duration');
+        const modalDescription = document.getElementById('modal-description');
+
+        // Initialize the page with all certificates
+        document.addEventListener('DOMContentLoaded', function() {
+            totalCertsElement.textContent = certificates.length;
+            displayCertificates(certificates);
+            setupFilterButtons();
+            setupModal();
+        });
+
+        // Display certificates in the grid
+        function displayCertificates(certs) {
+            certificatesContainer.innerHTML = '';
+            
+            certs.forEach(cert => {
+                const certificateCard = document.createElement('div');
+                certificateCard.className = 'certificate-card';
+                certificateCard.setAttribute('data-category', cert.category);
+                certificateCard.setAttribute('data-id', cert.id);
+                
+                // Category colors
+                const categoryColors = {
+                    fullstack: '#3498db',
+                    android: '#9b59b6',
+                    'ai-ml': '#e74c3c',
+                    cloud: '#f39c12',
+                    cyber: '#1abc9c',
+                    web: '#2ecc71',
+                    robotics: '#34495e',
+                    hackathon: '#9c27b0',
+                    java: '#d35400'
+                };
+                
+                // Category display names
+                const categoryNames = {
+                    fullstack: 'Full Stack',
+                    android: 'Android Dev',
+                    'ai-ml': 'AI/ML',
+                    cloud: 'Cloud Computing',
+                    cyber: 'Cybersecurity',
+                    web: 'Web Dev',
+                    robotics: 'Robotics',
+                    hackathon: 'Hackathon',
+                    java: 'Java'
+                };
+                
+                certificateCard.innerHTML = `
+                    <div class="certificate-header">
+                        <h3 class="certificate-title">${cert.title}</h3>
+                        <div class="certificate-org">${cert.organization}</div>
+                    </div>
+                    <div class="certificate-content">
+                        <div class="certificate-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Certificate ID:</div>
+                                <div class="detail-value">${cert.credentialId.substring(0, 20)}${cert.credentialId.length > 20 ? '...' : ''}</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Date:</div>
+                                <div class="detail-value">${cert.date}</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Duration:</div>
+                                <div class="detail-value">${cert.duration}</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-label">Grade/Status:</div>
+                                <div class="detail-value">${cert.grade}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-footer">
+                        <div class="certificate-category" style="background-color: ${categoryColors[cert.category] + '20'}; color: ${categoryColors[cert.category]}">
+                            ${categoryNames[cert.category]}
+                        </div>
+                        <button class="view-details-btn" data-id="${cert.id}">View Details</button>
+                    </div>
+                `;
+                
+                certificatesContainer.appendChild(certificateCard);
+            });
+            
+            // Add event listeners to the view details buttons
+            document.querySelectorAll('.view-details-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const certId = parseInt(this.getAttribute('data-id'));
+                    openCertificateModal(certId);
+                });
+            });
+        }
+
+        // Setup filter buttons
+        function setupFilterButtons() {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    if (filter === 'all') {
+                        displayCertificates(certificates);
+                    } else {
+                        const filteredCerts = certificates.filter(cert => cert.category === filter);
+                        displayCertificates(filteredCerts);
+                    }
+                });
+            });
+        }
+
+        // Setup modal functionality
+        function setupModal() {
+            // Close modal when X is clicked
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside the modal content
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // Open certificate modal with details
+        function openCertificateModal(certId) {
+            const certificate = certificates.find(cert => cert.id === certId);
+            
+            if (certificate) {
+                modalTitle.textContent = certificate.title;
+                modalOrg.textContent = certificate.organization;
+                modalDate.textContent = certificate.date;
+                modalId.textContent = certificate.credentialId;
+                modalDuration.textContent = certificate.duration;
+                modalGrade.textContent = certificate.grade;
+                modalDescription.textContent = certificate.description;
+                
+                modal.style.display = 'flex';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#home' || targetId === '#certificates' || targetId === '#about' || targetId === '#contact') {
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
